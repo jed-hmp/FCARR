@@ -26,12 +26,14 @@ function MyNavbar() {
         </Navbar.Brand>
 
         <Navbar.Toggle
-        aria-controls="offcanvasNavbar-expand-md"
-        onClick={() => setShowOffcanvas(true)}
-        className="custom-toggle"
-      >
-        <span className="mini-label">Menu</span>
-      </Navbar.Toggle>
+          aria-controls="offcanvasNavbar-expand-md"
+          onClick={() => setShowOffcanvas(true)}
+          className="custom-toggle"
+        >
+          <div className="toggle-content">
+            <span className="mini-label">Menu</span>
+          </div>
+        </Navbar.Toggle>
 
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-md"
