@@ -12,26 +12,7 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>FCARR</title>
-    <script>
-      // Redirect to the homepage on refresh
-      window.addEventListener('beforeunload', function () { 
-        const homepage = '/'; // Replace '/' with the route of your homepage
-        window.history.replaceState({}, document.title, homepage);
-      });
-    
-      // Scroll to top on refresh
-      window.addEventListener('load', function () {
-        setTimeout(() => {
-          // Ensure smooth scrolling works across all devices
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 0);
-      });
-    
-      // Additional check for touch events (specific for mobile devices)
-      window.addEventListener('touchstart', function () {
-        console.log('Touch detected: Mobile-specific interactions');
-      });
-    </script>
+ 
   
   </head>
   <body>
