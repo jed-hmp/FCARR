@@ -51,7 +51,6 @@
     z-index: 1050; /* Ensure it's above other elements */
     color: #003153;
   }
-  
   .custom-toggle .navbar-toggler-icon {
     filter: invert(11%) sepia(35%) saturate(1926%) hue-rotate(180deg) brightness(95%) contrast(98%);
   }

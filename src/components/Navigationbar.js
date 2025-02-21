@@ -29,7 +29,10 @@ function MyNavbar() {
           aria-controls="offcanvasNavbar-expand-md"
           onClick={() => setShowOffcanvas(true)}
           className="custom-toggle"
-        />
+        >
+          Menu
+        </Navbar.Toggle>
+        
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-md"
           aria-labelledby="offcanvasNavbarLabel-expand-md"
