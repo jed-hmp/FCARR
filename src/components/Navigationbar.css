@@ -45,13 +45,21 @@
   }
 
   .custom-toggle {
-    position: absolute;
+    position: relative;
     top: 20px; /* Adjust as needed */
     right: 10px; /* Align to right */
     z-index: 1050; /* Ensure it's above other elements */
     color: #003153;
+    padding: 0; /* Adjust padding if needed */
   }
-
+  .toggle-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
   
   /* Position the mini-label at the bottom center of the toggle button */
   .mini-label {
