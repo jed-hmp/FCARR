@@ -43,7 +43,17 @@
   .navbar-custom .nav-dropdown .dropdown-item {
     color: #003153 !important; /* Black text in dropdown */
   }
-
+  .custom-toggle .toggle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-label {
+    font-size: 12px; /* Adjust size as needed */
+    margin-top: 4px; /* Adds space between icon and text */
+    color: black; /* Adjust color based on your navbar theme */
+  }
   .custom-toggle {
     position: absolute;
     top: 20px; /* Adjust as needed */
