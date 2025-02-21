@@ -24,7 +24,7 @@ export default function ContactUs() {
         <div className="map-container">
           <iframe
             title="Location Map"
-            src="https://www.google.com/maps?q=FAITH+CHRISTIAN+ACADEMY+RODRIGUEZ+RIZAL&z=18&output=embed"
+            src="https://www.google.com/maps?q=FAITH+CHRISTIAN+ACADEMY+RODRIGUEZ+RIZAL&z=17&output=embed"
             className="responsive-map"
             allowFullScreen=""
             loading="lazy"
