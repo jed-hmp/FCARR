@@ -1,0 +1,120 @@
+#offcanvasNavbar-expand-md {
+    background-color: #FFFFFF;
+  }
+  .navbar-custom {
+    background-color: #FFFFFF; /* Dark blue background */
+    padding: 10px 0;
+  }
+  
+  .navbar-custom .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #003153 !important; /* Black text */
+    font-weight: bold;
+  }
+  
+  .navbar-logo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+
+  }
+  .navbar-brand-custom {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    font-weight: bold;
+    margin-right: 200px; /* Adds space between the logo and Home link */
+  }
+  .navbar-custom .navbar-nav {
+    display: flex;
+    align-items: center; /* Ensure proper alignment */
+  }
+  
+  .navbar-custom .nav-link, 
+  .navbar-custom .navbar-brand, 
+  .navbar-custom .nav-dropdown {
+    color: #003153 !important; /* Black text for links */
+  }
+  
+  .navbar-custom .nav-link.active {
+    font-weight: bold;
+    color: #003153 !important;
+  }
+  
+  .navbar-custom .nav-dropdown .dropdown-item {
+    color: #003153 !important; /* Black text in dropdown */
+  }
+
+  .custom-toggle {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 10px; /* Align to right */
+    z-index: 1050; /* Ensure it's above other elements */
+    color: #003153;
+  }
+  .custom-toggle .navbar-toggler-icon {
+    filter: invert(11%) sepia(35%) saturate(1926%) hue-rotate(180deg) brightness(95%) contrast(98%);
+  }
+  .custom-offcanvas-header .btn-close {
+    filter: invert(13%) sepia(90%) saturate(7490%) hue-rotate(356deg) brightness(60%) contrast(105%);
+  }
+  
+  .custom-offcanvas-header {
+    position: relative;
+    width: 100%;
+    text-align: center; /* Center the text */
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2; /* Adjust transparency */
+    z-index: -1; /* Put behind text */
+  }
+  
+  .offcanvas-logo {
+    max-width: 80px; /* Adjust size */
+    height: auto;
+  }
+ 
+  
+
+  /* General nav link styling */
+.custom-nav .nav-item {
+  font-family: "Poppins", sans-serif; /* Change the font */
+  font-size: 16px;
+  font-weight: 600;
+  color: #003153; /* Change text color */
+  text-transform: uppercase; /* Optional: Makes text uppercase */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Hover effect */
+.custom-nav .nav-item:hover {
+  color: #191970; /* Change hover color */
+}
+
+/* Active link styling */
+.custom-nav .nav-item.active {
+  color: black; /* Gold color for active page */
+  font-weight: bold;
+  border-bottom: 2px solid #003153; /* Add underline effect */
+}
+
+/* Dropdown menu styles */
+.nav-dropdown .dropdown-menu {
+  background-color: #003153; /* Light background */
+  border-radius: 8px;
+}
+
+.nav-dropdown .dropdown-item {
+  font-family: "Poppins", sans-serif;
+  color: #003153;
+}
+
+.nav-dropdown .dropdown-item:hover {
+  background-color: #003153; /* Blue background on hover */
+  color: #003153;
+  
+}
