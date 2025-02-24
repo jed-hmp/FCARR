@@ -51,6 +51,10 @@ export default function ContactUs() {
           ></textarea>
         </div>
 
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+
         <h2>CONTACT US</h2>
         <p><strong>Address</strong></p>
         <p>
