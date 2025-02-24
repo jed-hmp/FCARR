@@ -24,32 +24,105 @@
   .bottom-section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
   }
   
-  .contact-details {
-    flex: 1;
-    padding-right: 20px;
+  /* Left Section */
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
-  
-  .contact-details h2 {
-    color: #003366;
+  .map-heading {
+    font-size: 22px;
+    color: #002147;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
   }
-  
-  .contact-details p {
-    margin: 5px 0;
-  }
-  
   .map-container {
-    flex: 1;
-    height: 250px;
+    width: 100%;
   }
   
-  .map-container iframe {
+  .responsive-map {
     width: 100%;
-    height: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 10px;
   }
+  
+  .map-instruction {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Right Section */
+  .right-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Headings */
+  .right-section h2 {
+    font-size: 22px;
+    color: #002147;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* Form */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #003153;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #003153;
+    font-size: 14px;
+    outline: none;
+  }
+  .bold-input {
+    font-weight: bold;
+    color: #000;
+  }
+
+  
+  .form-group textarea {
+    height: 80px;
+    resize: vertical;
+  }
+  
+  /* Contact info paragraphs */
+  .right-section p {
+    margin: 6px 0;
+    color: #003153;
+    font-size: 16px;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    color: #002147;
+  }
+
   .footer {
     background-color: #1f466b;
     color: white;
@@ -120,22 +193,17 @@
     .bottom-section {
         flex-direction: column;
         padding: 10px;
+        align-items: center;
     }
 
-    .contact-details {
-        padding-right: 0;
-        text-align: center;
+    .left-section, .right-section {
+      width: 100%;
+    }
+  
+    .map-instruction {
+      text-align: center;
     }
 
-    .map-container {
-        height: 300px;
-        width: 100%;
-    }
-
-    .map-container iframe {
-        width: 100%;
-        height: 100%;
-    }
     .footer {
         background-color: #1f466b;
         color: white;

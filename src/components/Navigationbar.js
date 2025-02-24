@@ -73,18 +73,19 @@ function MyNavbar() {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Academics" id="academics-dropdown" className="nav-item">
-                <NavDropdown.Item as={Link} to="/curriculum" onClick={handleLinkClick}>
-                  Curriculum
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/faculty" onClick={handleLinkClick}>
-                  Faculty
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link 
+                as={Link} 
+                to="/admissions" 
+                className={`nav-item ${location.pathname === "/admissions" ? "active" : ""}`}
+                onClick={handleLinkClick}
+              >
+                Admissions
+              </Nav.Link>
+              
 
               <NavDropdown title="Activities" id="activities-dropdown" className="nav-item">
-                <NavDropdown.Item as={Link} to="/sports" onClick={handleLinkClick}>
-                  Sports
+                <NavDropdown.Item as={Link} to="/sActivities" onClick={handleLinkClick}>
+                  School Activities
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/clubs" onClick={handleLinkClick}>
                   Clubs

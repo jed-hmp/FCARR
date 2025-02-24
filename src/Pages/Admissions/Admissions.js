@@ -1,11 +1,10 @@
 import React from 'react';
-import "./Events.css";
+import "./Admissions.css";
 
 export default function Events() {
   return (
-    <div id="eventsPage">
-    <h1> Events</h1>
+    <div id="admissionsPage">
+    <h1> admission</h1>
     </div>
   );
 };
-
