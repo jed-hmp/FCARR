@@ -24,7 +24,7 @@ export default function Home() {
           <h2 className="heading">PHILOSOPHY OF EDUCATION</h2>
           <div className="philosophy-box scrollable">
             <p className="text">
-              The ultimate goal of womann is the attainment of the highest good through
+              The ultimate goal of man is the attainment of the highest good through
               education, a productive life, and a peaceful, harmonious co-existence
               with society and fellowmen.
             </p>
