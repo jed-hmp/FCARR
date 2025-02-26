@@ -60,9 +60,7 @@ export default function AboutUs() {
         <div className="about-text">
           <h2>ABOUT US</h2>
           <p>
-            Faith Christian Academy of Rodriguez Rizal, Inc. is a private
-            educational institution established in 1995, located in Kasiglahan
-            Village, San Jose, Rodriguez, Rizal.
+          Faith Christian Academy of Rodriguez Rizal, Inc. is a private educational institution established in 1995, located in Kasiglahan Village, San Jose, Rodriguez, Rizal. The school aims to provide quality education in a Christian-centered environment, fostering both academic excellence and character development. With a strong foundation in faith and learning, the institution has been dedicated to shaping students into morally upright and responsible individuals for nearly three decades.
           </p>
         </div>
 
@@ -71,15 +69,13 @@ export default function AboutUs() {
           <div className="mission">
             <h2>MISSION</h2>
             <p>
-              To dedicate our noble duty, time, values, and knowledge in imparting
-              the joy of learning, developing children into great leaders and nation builders.
+            To dedicate our sublime and noble duty, time, values, and knowledge in imparting the joy and love of learning so as to develop the child's inmate potential who will emerge great leaders and nation builders in the future
             </p>
           </div>
           <div className="vision">
             <h2>VISION</h2>
             <p>
-              To be an institution that builds a strong educational foundation for
-              young minds, helping them excel in their craft and become responsible, productive citizens.
+            To be an institution that builds a strong educational foundation of young minds, who will excel in their chosen craft in order to become law abiding citizens, morally and spiritually upright and productive contributor to the welfare of the community and nation
             </p>
           </div>
         </div>
@@ -87,7 +83,7 @@ export default function AboutUs() {
         {/* Academic Offer */}
         <div className="academic-offer">
           <h2>ACADEMIC OFFER</h2>
-          <p>Early Childhood Education, Gradeschool, Highschool</p>
+          <p>Preschool, Gradeschool, Highschool</p>
         </div>
 
         {/* Academic Images with Clickable Zoom */}

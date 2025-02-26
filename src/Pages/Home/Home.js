@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Home.css";
 import mainImage from "./assets/mainImage.png";
-import eventImages from "./assets/eventImages.png";
+import collagepict from "./assets/collagepict.png";
 import footerLogo from "./assets/footerLogo.png";
 
 export default function Home() {
   const [isZoomed, setIsZoomed] = useState(false);
+
 
   return (
     <div id="homePage">
@@ -29,36 +30,34 @@ export default function Home() {
               with society and fellowmen.
             </p>
           </div>
-        </div>
+        </div> 
 
-        {/* Sub-Content Section */}
-        <div className="sub-content">
-          <div className="left-section">
-            <h3 className="sub-heading">SADSADF SADA</h3>
-            <div className="sadsad box scrollable">
-              <p className="text">
-                The ultimate goal of man is the attainment of the highest good through
-                education, a productive life, and a peaceful, harmonious co-existence
-                with society and fellowmen.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Section with Animated Image & Click-to-Zoom Feature */}
-          <div className="right-section">
-            <motion.img
-              src={eventImages}
-              alt="School Events"
-              className="event-img"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 2, delay: 0.5 }}
-              onClick={() => setIsZoomed(true)}
-              style={{ cursor: "pointer" }}
-            />
-          </div>
-        </div>
-      </div>
+      {/* Animated Container */}
+      <motion.div
+        className="image-text-container"
+        initial={{ opacity: 0, y: 50 }} // Start faded out and moved down
+        animate={{ opacity: 1, y: 0 }} // Fade in and move up
+        transition={{ duration: 1.8, ease: "easeOut" }} // Smooth transition
+      >
+        <img
+          src={collagepict}
+          alt="School Event"
+          className="uploaded-img"
+          onClick={() => setIsZoomed(true)} // Trigger zoom
+        />
+        <p className="uploaded-text">
+          At Faith Christian Academy of Rodriguez Rizal, we believe in nurturing
+          not just students, but well-rounded individuals ready to take on the world.
+          Our vibrant community is dedicated to providing a supportive and engaging
+          environment where curiosity is encouraged, creativity is celebrated, and
+          critical thinking is developed. We understand that each student is unique,
+          and we strive to help them discover their passions and strengths. By fostering
+          responsible digital citizenship and professional skills, we aim to prepare our
+          students to make a positive impact in their communities and beyond. Together,
+          we're not just shaping future leaders; we're building a family that values
+          growth, compassion, and lifelong learning.
+        </p>
+      </motion.div>
 
       {/* Fullscreen Overlay for Zoomed Image */}
       <AnimatePresence>
@@ -68,21 +67,22 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            onClick={() => setIsZoomed(false)}
+            transition={{ duration: 0.5 }}
+            onClick={() => setIsZoomed(false)} // Close zoom on click
           >
             <motion.img
-              src={eventImages}
+              src={collagepict} // Use the same image as the clicked one
               alt="Zoomed Event"
               className="zoomed-img"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.5 }} // Smooth zoom in and out
             />
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
 
       {/* Footer Section */}
       <footer className="footer">
@@ -115,28 +115,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      {/* Inline Styles for Overlay */}
-      <style jsx>{`
-        .overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0, 0, 0, 0.8);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 1000;
-        }
-
-        .zoomed-img {
-          max-width: 90%;
-          max-height: 90%;
-          border-radius: 10px;
-        }
-      `}</style>
     </div>
   );
 }

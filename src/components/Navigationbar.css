@@ -128,3 +128,7 @@
   color: #003153;
   
 }
+#about-dropdown::after,
+#activities-dropdown::after {
+  display: none !important; /* Hides the default dropdown arrow */
+}

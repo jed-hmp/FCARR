@@ -32,14 +32,12 @@ export default function ContactUs() {
       {/* Right side: Message form + Contact details */}
       <div className="right-section">
         <h2>Message us!</h2>
-        <div className="form-group">
+          <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
-            value="faith.christian.academy.rizal@gmail.com"
-            readOnly
-             className="bold-input"
+            placeholder="Enter your email..."
           />
         </div>
 

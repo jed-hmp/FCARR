@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 #homePage {
     width: 100vw;
     height: 100vh;
-   
     position: relative;
 }
 
@@ -9,6 +9,8 @@
     width:100%;
     margin: auto;
     font-family: Arial, sans-serif;
+    text-align: justify; /* Justifies the text */
+
   }
  
   
@@ -53,36 +55,68 @@
     color: #003153;
     text-align: justify;
     font-family: 'Jomolhari', serif;
+    padding: 10px;
 
   }
-  .sub-content {
+  .image-text-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: transparent; /* Ensures no background */
+    
   }
-  .left-section {
-    width: 45%;
-  }
-  .sub-heading {
-    font-size: 2rem;
-    color: #003153;
-    font-weight: bold;
-  }
-  .right-section {
-    width: 50%;
-  }
-  .event-img {
-    width: 50%;
+  
+  .uploaded-img {
+    max-width: 100%;
     height: auto;
-    border: 1px solid #ccc;
+    background-color: transparent; /* Ensures no background */
+    box-shadow: none; /* Removes shadow if needed */
+    cursor: pointer;
+    
   }
+  
+  .uploaded-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color:  #003153;
+    padding: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: justify; /* Justifies the text */
+    word-spacing: -2px; /* Slightly reduces space between words */
+    cursor: pointer;
+  }
+  
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .zoomed-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  }
+ 
   .footer {
     background-color: #1f466b;
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: 200px;
   }
   .footer-contact a {
     text-decoration: none;
@@ -157,6 +191,9 @@
 
   .philosophy-box {
     width: 100%;
+  }
+  .text{
+    font-size: 20px;
   }
   .sadsad.box {
     width: 100%;
