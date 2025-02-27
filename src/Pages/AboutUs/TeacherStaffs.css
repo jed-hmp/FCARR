@@ -1,7 +1,104 @@
 #teacherstaffPage {
     width: 100vw;
     height: 100vh;
-    background-color: #D6D6CA;
+    background-color: #FFFFFF;
     position: relative;
   
 }
+.org-chart {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .teacher-staff {
+    text-align: center;
+    font-family: 'Jomolhari', serif;
+  }
+  
+  .teacher-staff h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #003153;
+    margin-bottom: 10px;
+    font-family: 'Jomolhari', serif;
+  }
+  
+  .teacher-staff p {
+    font-size: 1.2rem;
+    color: #003153;
+    margin-bottom: 20px;
+    font-family: 'Jomolhari', serif;
+  }
+  
+  .content-section {
+    margin-bottom: 0%;
+    background-color: transparent;
+  }
+  
+  .staff-picture {
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+  }
+  
+  .description {
+    font-size: 20px;
+    color: #003153;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  .zoomed-img {
+    max-width: 90%;
+    max-height: 90%;
+   
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  @media (max-width: 768px) {
+    .org-chart{
+        margin-top: 10px;
+    }
+    .teacher-staff{
+        text-align: center;
+        font-family: 'Jomolhari', serif;
+        margin-top: 80px;
+    }
+    .teacher-staff h2 {
+        font-size: 1.5rem;
+      }
+    
+      .teacher-staff p {
+        font-size: 1rem;
+      }
+  
+    .description {
+      font-size: 0.9rem;
+      padding: 0 10px;
+    }
+  
+    .org-chart {
+      padding: 10px;
+      margin: 10px auto;
+    }
+  }
+
+  

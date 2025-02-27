@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion"; //for animation
 import "./AboutUs.css";
+import footerLogo from "./assets/footerLogo.png";
 
 //carousel
 import mainImage from "./assets/mainImage.png";
@@ -141,6 +142,37 @@ export default function AboutUs() {
           )}
         </AnimatePresence>
       </div>
+       {/* Footer Section */}
+       <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <div className="footer-logo-container">
+              <img src={footerLogo} alt="FCARR Logo" className="footer-logo" />
+              <span className="footer-logo-text">FCARR</span>
+            </div>
+            <p className="footer-text">
+              © 1995 FCARR.<br />All rights reserved.
+            </p>
+          </div>
+
+          <div className="footer-right">
+            <p className="footer-contact-title">Contact us</p>
+            <p className="footer-contact">
+              <a
+                href="https://www.facebook.com/profile.php?id=100081267735529"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FCARR FB Page
+              </a>
+              <br />
+              0909-605-7966
+              <br />
+              faith.christian.academy.rizal@gmail.com
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
