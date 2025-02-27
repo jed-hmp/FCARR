@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import "./TeacherStaffs.css";
-import TeachersStaffs from "./assets/TeachersAndStaffs.png";
+import TeachersStaffs from "./assets/TeacherAndStaffs.png";
 import footerLogo from "./assets/footerLogo.png";
 
 export default function Events() {

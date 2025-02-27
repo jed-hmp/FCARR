@@ -149,7 +149,7 @@
     }
   
     .admissions-content {
-      padding: 20px 10px; /* Smaller padding for smaller screens */
+      padding: 20px 5px; /* Smaller padding for smaller screens */
       text-align: left; /* Align text to left on mobile */
     }
   

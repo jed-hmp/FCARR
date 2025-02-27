@@ -181,7 +181,7 @@
     }
   
     .small-images {
-        display: flex;
+      display: flex;
       justify-content: center;
       overflow-x: auto; /* Enables scrolling */
       white-space: nowrap; /* Keeps images in a row */
