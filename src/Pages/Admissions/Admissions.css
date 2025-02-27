@@ -1,7 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 #admissionsPage {
     width: 100vw;
     height: 100vh;
-    background-color: #D6D6CA;
+    background-color: #FFFFFF;
     position: relative;
   
 }
+.admissions {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    width:100%;
+    margin: auto;
+  }
+  
+  .header {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .header-image {
+    width: 60%;
+    height: auto;
+    margin-top: 50px;
+  }
+  
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Lexend', sans-serif;
+  }
+  .admissions-content{
+    text-align: center; /* Center align text for better mobile view */
+    padding: 40px 20px; /* Add padding for better spacing */
+    max-width: 900px; /* Limit content width on larger screens */
+    margin: 0 auto; /* Center content horizontally */
+  }
+  .admissions-content h2{
+    font-size: 2rem;
+    color: #003153;
+    font-weight: bold;
+    text-align:center;
+    margin-bottom: 20px;
+    
+  }
+
+  .admissions-content p {
+    font-size:1.5rem;
+    color: #003153;
+    text-align: justify;
+    font-family: 'Jomolhari', serif;
+    padding: 10px;
+    text-align: justify;
+    line-height: 1.8; /* Better line spacing */
+  }
+  
+  
+  .gallery-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .image-grid {
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 0 1rem;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  .arrow:hover {
+    color: #003153;
+  }
+  
+  
+  .arrow.left {
+    left: 10px;
+  }
+  
+  .arrow.right {
+    right: 10px;
+  }
+  
+  .accordion-container {
+    display: flex;
+    justify-content: center; /* Center the accordion */
+  }
+  
+  .responsive-accordion {
+    width: 90%; /* Default width for Desktop */
+  }
+  .responsive-accordion .accordion-button {
+    background-color: #003153 !important; /* Header Background */
+    color: white !important; /* Header Text Color */
+    border-radius: 5px; 
+  }
+  
+  .responsive-accordion .accordion-button:not(.collapsed) {
+    background-color: #002244 !important; /* Background when accordion is open */
+  }
+  
+  .responsive-accordion .accordion-button::after {
+    filter: invert(1) brightness(2); /* This will make the arrow white */
+  }
+  
+  .responsive-accordion .accordion-button:focus {
+    box-shadow: none !important; /* Remove default focus outline */
+  }
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: row; /* Side by side layout on desktop */
+      text-align: center;
+      margin-top:50px;
+    }
+    .header-text h1 {
+      font-size: 1rem;
+      margin-top: 50px;
+      text-align: center;
+      
+    }
+    .header-image {
+      width: 100%;
+      
+    }
+  
+    .admissions-content {
+      padding: 20px 10px; /* Smaller padding for smaller screens */
+      text-align: left; /* Align text to left on mobile */
+    }
+  
+    .admissions-content h2 {
+      font-size: 1.8rem; /* Smaller heading size for mobile */
+    }
+  
+    .admissions-content p {
+      font-size: 1rem; /* Smaller font for better readability */
+      line-height: 1.6;
+    }
+  
+    .gallery-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .image-grid {
+      gap: 5px;
+    }
+    .gallery-image {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .gallery-image.active {
+      scale: 1;
+      opacity: 1;
+      filter: none;
+    }
+  
+    .arrow {
+      width: 50px;
+      height: 50px;
+      margin: 0.5rem;
+    }
+   
+    .responsive-accordion {
+      width: 100%; /* Full width on Mobile */
+    }
+  }
