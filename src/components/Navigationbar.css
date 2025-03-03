@@ -132,3 +132,20 @@
 #activities-dropdown::after {
   display: none !important; /* Hides the default dropdown arrow */
 }
+
+.enrollment-link {
+ margin-left: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .enrollment-link {
+    font-size: 14px;
+    width: 100%; /* Full width on mobile */
+    margin-top:10px;
+    margin-left: 0px;
+  }
+}

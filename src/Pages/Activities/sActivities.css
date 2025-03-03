@@ -1,7 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 #sActivitiesPage {
     width: 100vw;
     height: 100vh;
-    background-color: #D6D6CA;
+    background-color: #FFFFFF;
     position: relative;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
+   
   
 }
+.activities-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
+  }
+  
+  .activities-title {
+    color: #002d62; /* Dark Blue */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .activities-intro {
+    color: #003153;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  .activities-list p {
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #003153;
+    line-height: 1.6;
+    font-size: 1.2rem;
+  }
+  
+  .activities-list strong {
+    color: #002d62; /* Dark Blue */
+    font-weight: bold;
+  }
+  .academic-images {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .academic-images img {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+ .academic-title {
+    font-size: 1.8rem;
+    color: #00274d;
+    margin-bottom: 10px;
+ }
+  .academic-caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #00274d;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .zActivities-card {
+    background: white;
+    padding: 20px;
+
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 700px;
+    margin: auto; /* Center the card */
+  }
+  
+  .zActivites-content p {
+    font-size: 20px;
+    color: #003153;
+    margin-bottom: 15px;
+  }
+  
+  .zActivities-image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .zActivites-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) { /* Tablet & Mobile */
+    .activities-title {
+      font-size: 24px; /* Smaller font size */
+      letter-spacing: 1px; /* Adjust letter spacing */
+      text-align: center; /* Optional: Center text on mobile */
+      margin-top: 35px;
+    }
+  }

@@ -20,6 +20,8 @@ function MyNavbar() {
   };
 
   return (
+  
+
     <Navbar expand="md" className="navbar-custom" fixed="top">
       <Container>
         {/* Logo and Brand Name */}
@@ -66,8 +68,14 @@ function MyNavbar() {
                 as={Link}
                 to="/"
                 className={`nav-item ${location.pathname === "/" ? "active" : ""}`}
-                onClick={handleLinkClick}
-              >
+                onClick={() => {
+                handleLinkClick();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+                    >
                 Home
               </Nav.Link>
 
@@ -84,10 +92,22 @@ function MyNavbar() {
                 show={openDropdown === "about"}
                 onClick={() => handleDropdownToggle("about")}
               >
-                <NavDropdown.Item as={Link} to="/about" onClick={handleLinkClick}>
+                <NavDropdown.Item as={Link} to="/about" onClick={() => {
+                handleLinkClick();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}>
                   About
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/teacherstaffs" onClick={handleLinkClick}>
+                <NavDropdown.Item as={Link} to="/teacherstaffs"  onClick={() => {
+                handleLinkClick();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}>
                   Teachers & Staffs
                 </NavDropdown.Item>
               </NavDropdown>
@@ -97,41 +117,62 @@ function MyNavbar() {
                 as={Link}
                 to="/admissions"
                 className={`nav-item ${location.pathname === "/admissions" ? "active" : ""}`}
-                onClick={handleLinkClick}
+                onClick={() => {
+                handleLinkClick();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               >
                 Admissions
               </Nav.Link>
 
               {/* Activities Dropdown */}
-              <NavDropdown
-                title={
-                  <>
-                    Activities{" "}
-                    {openDropdown === "activities" ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
-                  </>
-                }
-                id="activities-dropdown"
-                className="nav-item"
-                show={openDropdown === "activities"}
-                onClick={() => handleDropdownToggle("activities")}
+              <Nav.Link
+                as={Link}
+                to="sActivities"
+                className={`nav-item ${location.pathname === "sActivities" ? "active" : ""}`}
+                onClick={() => {
+                handleLinkClick();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+                
               >
-                <NavDropdown.Item as={Link} to="/sActivities" onClick={handleLinkClick}>
-                  School Activities
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/recollection" onClick={handleLinkClick}>
-                  Recollection
-                </NavDropdown.Item>
-              </NavDropdown>
+                Activities
+              </Nav.Link>
 
               {/* Contact Link */}
               <Nav.Link
                 as={Link}
                 to="/contact"
                 className={`nav-item ${location.pathname === "/contact" ? "active" : ""}`}
-                onClick={handleLinkClick}
+                onClick={() => {
+                handleLinkClick();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               >
                 Contact
               </Nav.Link>
+              
+              <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeuKIuoUfYDSEcAuHHCxOD94jGvWTJRfI_Gzv_GjMuqjGElnA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`nav-item ${location.pathname === "/enrollment" ? "active" : ""} enrollment-link`}
+              onClick={handleLinkClick}
+              style={{ textDecoration: "none"  }}
+            >
+              Enrollment
+            </a>
+
+              
 
 
             </Nav>
@@ -139,6 +180,7 @@ function MyNavbar() {
         </Navbar.Offcanvas>
       </Container>
     </Navbar>
+
   );
 }
 

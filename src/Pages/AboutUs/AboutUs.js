@@ -88,14 +88,14 @@ export default function AboutUs() {
         </div>
 
         {/* Academic Images with Clickable Zoom */}
-        <div className="academic-images">
+        <div className="academic-imagesA">
           <div className="academic-row">
             {[elem1, elem2, elem3].map((img, index) => (
               <motion.img
                 key={index}
                 src={img}
                 alt={`Students ${index + 1}`}
-                className="academic-image"
+                className="academic-imageB"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 3, delay: index * 0.3 }}
@@ -109,7 +109,7 @@ export default function AboutUs() {
             <motion.img
               src={hs}
               alt="Students 4"
-              className="academic-image large"
+              className="academic-imageB large"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 3, delay: 0.5 }}

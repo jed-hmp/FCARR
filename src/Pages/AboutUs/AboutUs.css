@@ -1,15 +1,16 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Tibetan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 #aboutusPage {
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
     position: relative;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   
 }
 .about-us-container {
     text-align: center;
     padding: 20px;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   .image-style {
     margin-top: 50px;
@@ -115,7 +116,7 @@
     font-family: 'Noto Serif Tibetan', serif;
   }
   
-  .academic-images {
+  .academic-imagesA{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,7 +135,7 @@
   
   }
   
-  .academic-image {
+  .academic-imageB{
     width: 12%; /* Adjust as needed */
     height: auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -171,6 +172,7 @@
 @media (max-width: 768px) {
     .about-us-container {
       padding: 10px;
+      font-family: 'Josefin Sans', sans-serif; /* Added the font */
     }
   
     .main-image img {
@@ -210,18 +212,18 @@
       margin-bottom: 15px;
     }
   
-    .academic-images {
+    .academic-imagesA{
       flex-direction: column;
       align-items: center;
     }
   
-    .academic-image {
+    .academic-imageB{
       width: 100px;
       align-items: center;
     }
   
     .academic-column .large {
-      width:70%;
+      width:80%px;
       height: 80px;
       max-width: 200px;
     }

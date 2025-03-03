@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 #teacherstaffPage {
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
     position: relative;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   
 }
 .org-chart {
@@ -12,11 +14,12 @@
     max-width: 900px;
     width: 100%;
     margin-top: 100px;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   
   .teacher-staff {
     text-align: center;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   
   .teacher-staff h2 {
@@ -31,7 +34,7 @@
     font-size: 1.2rem;
     color: #003153;
     margin-bottom: 20px;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   
   .content-section {
@@ -79,7 +82,7 @@
     }
     .teacher-staff{
         text-align: center;
-        font-family: 'Jomolhari', serif;
+        font-family: 'Josefin Sans', sans-serif; /* Added the font */
         margin-top: 80px;
     }
     .teacher-staff h2 {

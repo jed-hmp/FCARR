@@ -81,10 +81,18 @@ export default function Events() {
         {/* Accordion Section */}
         <Container className="accordion-container">
           <Accordion defaultActiveKey="0" alwaysOpen className="responsive-accordion">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>REQUIREMENTS FOR ENROLLMENT</Accordion.Header>
-              <Accordion.Body>List of requirements here...</Accordion.Body>
-            </Accordion.Item>
+          <Accordion.Item eventKey="0">
+          <Accordion.Header>REQUIREMENTS FOR ENROLLMENT</Accordion.Header>
+          <Accordion.Body>
+            Must bring the following documents to the school office:
+            <ul style={{ color: '#003153' }}>
+              <li>PSA Birth Certificate</li>
+              <li>Original Report Card</li>
+              <li>Form 137/SF10</li>
+              <li>Good Morale Certificate</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
 
             <Accordion.Item eventKey="1">
               <Accordion.Header>APPLICATION PROCEDURE</Accordion.Header>

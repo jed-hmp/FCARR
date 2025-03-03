@@ -4,10 +4,11 @@
     height: 100vh;
     background-color: #FFFFFF;
     position: relative;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   
 }
 .admissions {
-    font-family: Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif; /* Added the font */
     text-align: center;
     padding: 20px;
     width:100%;
@@ -34,7 +35,7 @@
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   .admissions-content{
     text-align: center; /* Center align text for better mobile view */
@@ -55,7 +56,7 @@
     font-size:1.5rem;
     color: #003153;
     text-align: justify;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
     padding: 10px;
     text-align: justify;
     line-height: 1.8; /* Better line spacing */
@@ -136,6 +137,7 @@
       flex-direction: row; /* Side by side layout on desktop */
       text-align: center;
       margin-top:50px;
+      font-family: 'Josefin Sans', sans-serif; /* Added the font */
     }
     .header-text h1 {
       font-size: 1rem;
@@ -149,16 +151,16 @@
     }
   
     .admissions-content {
-      padding: 20px 5px; /* Smaller padding for smaller screens */
+      padding: 20px 0px; /* Smaller padding for smaller screens */
       text-align: left; /* Align text to left on mobile */
     }
   
     .admissions-content h2 {
-      font-size: 1.8rem; /* Smaller heading size for mobile */
+      font-size: 1.9rem; /* Smaller heading size for mobile */
     }
   
     .admissions-content p {
-      font-size: 1rem; /* Smaller font for better readability */
+      font-size: 1.1rem; /* Smaller font for better readability */
       line-height: 1.6;
     }
   
@@ -177,7 +179,6 @@
     }
   
     .gallery-image.active {
-      scale: 1;
       opacity: 1;
       filter: none;
     }

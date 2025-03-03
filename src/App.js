@@ -5,9 +5,7 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import TeacherStaffs from "./Pages/AboutUs/TeacherStaffs";
 import Admissions from "./Pages/Admissions/Admissions";
 import Activities from "./Pages/Activities/sActivities";
-import Recollection from "./Pages/Activities/Recollection";
 import ContactUs from "./Pages/ContactUs/ContactUs";
-import Admin from "./Pages/Admin/Admin";
 
 
 function App() {
@@ -21,9 +19,8 @@ function App() {
           <Route path="/teacherstaffs" element={<TeacherStaffs />} />
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/sActivities" element={<Activities />} />
-          <Route path="/recollection" element={<Recollection />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/admin" element={<Admin />} />
+         
         </Routes>
       </div>
     </Router>

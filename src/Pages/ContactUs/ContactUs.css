@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 #contactusPage {
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
     position: relative;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   
 }
 .contact-card {
@@ -14,6 +16,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   
   .top-section .banner-img {
@@ -29,7 +32,7 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   
   /* Left Section */
