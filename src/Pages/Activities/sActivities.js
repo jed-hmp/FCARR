@@ -86,7 +86,8 @@ export default function Events() {
       <div className="zActivities-card">
         <div className="zActivites-content">
           <p>
-          <strong>{tournamenttitle}</strong>  -  Cultivate discipline, self-defense skills, and confidence through structured training and expert coaching.
+          <strong>{tournamenttitle}</strong>  -  A school tournament is a competitive event where students participate in various sports, academic, or extracurricular activities to showcase their skills and teamwork. It fosters camaraderie, sportsmanship, and school spirit while providing a platform for students to excel and have fun.
+
           </p>
         </div>
         <div className="zActivities-image">
@@ -97,7 +98,8 @@ export default function Events() {
       <div className="zActivities-card">
         <div className="zActivites-content">
           <p>
-          <strong>{recollectiontitle}</strong>  -  Cultivate discipline, self-defense skills, and confidence through structured training and expert coaching.
+          <strong>{recollectiontitle}</strong> -A school recollection at Faith Christian Academy is a spiritual retreat designed to help students reflect on their faith, personal growth, and relationship with God. It typically includes prayer, worship, inspirational talks, group activities, and moments of silence for self-examination. The goal is to strengthen students' spiritual lives and encourage them to live out Christian values in their daily actions.
+
           </p>
         </div>
         <div className="zActivities-image">
@@ -108,6 +110,7 @@ export default function Events() {
 
       </div>
     </div>
+
     {/* Footer Section */}
     <footer className="footer">
         <div className="footer-content">

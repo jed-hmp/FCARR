@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container, Offcanvas, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, Offcanvas, NavDropdown, Modal, Button } from "react-bootstrap";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Icons for dropdown animation
@@ -9,6 +9,7 @@ import "./Navigationbar.css";
 function MyNavbar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
+  const [showModal, setShowModal] = useState(false);
   const location = useLocation(); // Get current URL
 
   const handleLinkClick = () => {
@@ -18,10 +19,24 @@ function MyNavbar() {
   const handleDropdownToggle = (eventKey) => {
     setOpenDropdown(openDropdown === eventKey ? null : eventKey); // Toggle dropdown
   };
+  
+  const handleEnrollmentClick = (e) => {
+    e.preventDefault();
+    setShowModal(true);
+  };
+
+  const handleConfirm = () => {
+    setShowModal(false);
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSeuKIuoUfYDSEcAuHHCxOD94jGvWTJRfI_Gzv_GjMuqjGElnA/viewform",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
 
   return (
   
-
+    <>
     <Navbar expand="md" className="navbar-custom" fixed="top">
       <Container>
         {/* Logo and Brand Name */}
@@ -161,16 +176,10 @@ function MyNavbar() {
                 Contact
               </Nav.Link>
               
-              <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeuKIuoUfYDSEcAuHHCxOD94jGvWTJRfI_Gzv_GjMuqjGElnA/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`nav-item ${location.pathname === "/enrollment" ? "active" : ""} enrollment-link`}
-              onClick={handleLinkClick}
-              style={{ textDecoration: "none"  }}
-            >
-              Enrollment
-            </a>
+              <a href="#" className="nav-item enrollment-link" onClick={handleEnrollmentClick}>
+                  Enrollment
+                </a>
+
 
               
 
@@ -180,7 +189,23 @@ function MyNavbar() {
         </Navbar.Offcanvas>
       </Container>
     </Navbar>
-
+    
+      {/* Modal Component */}
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Proceed with Enrollment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure you want to proceed to enrollment?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" style={{ backgroundColor: '#FF0000', color: '#FFFFFF', border: 'none' }} onClick={() => setShowModal(false)}>
+            No
+          </Button>
+          <Button variant="primary" style={{ backgroundColor: '#003153', color: '#FFFFFF', border: 'none' }} onClick={handleConfirm}>
+            Yes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </>
   );
 }
 
