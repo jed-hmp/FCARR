@@ -22,7 +22,7 @@
   .navbar-brand-custom {
     font-size: 1.5rem; /* Adjust the size as needed */
     font-weight: bold;
-    margin-right: 200px; /* Adds space between the logo and Home link */
+    margin-right:100px; /* Adds space between the logo and Home link */
   }
   .navbar-custom .navbar-nav {
     display: flex;
@@ -138,6 +138,7 @@
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease-in-out;
+
 }
 
 
