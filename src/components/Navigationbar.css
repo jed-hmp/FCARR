@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 #offcanvasNavbar-expand-md {
     background-color: #FFFFFF;
   }
@@ -92,7 +93,7 @@
 
   /* General nav link styling */
 .custom-nav .nav-item {
-  font-family: "Poppins", sans-serif; /* Change the font */
+  font-family: 'Josefin Sans', sans-serif; /* Added the font */
   font-size: 16px;
   font-weight: 600;
   color: #003153; /* Change text color */
@@ -119,7 +120,7 @@
 }
 
 .nav-dropdown .dropdown-item {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Josefin Sans', sans-serif; /* Added the font */
   color: #003153;
 }
 
@@ -140,6 +141,70 @@
   transition: all 0.3s ease-in-out;
 
 }
+.modal-body-custom {
+  text-align: center;
+  padding: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.modal-buttons-row {
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Josefin Sans', sans-serif; /* Added the font */
+}
+.modal-button:hover, .modal-button:active {
+  transform: scale(1.05);
+}
+
+.new-old-button {
+  background-color: 1434A4;
+  color: white;
+}
+.new-old-button:hover, .new-old-button:active {
+  background-color: #0056b3;
+}
+
+.transferee-button {
+  background-color: #0F52BA;
+  color: white;
+}
+.transferee-button:hover, .transferee-button:active {
+  background-color: #0F52BA;
+}
+
+.yes-button {
+  background-color: #28a745;
+  color: white;
+}
+.yes-button:hover {
+  background-color: #218838;
+}
+
+.no-button {
+  background-color: #dc3545;
+  color: white;
+
+}
+.no-button:hover {
+  background-color: #c82333;
+}
+.modal-confirmation p {
+  margin-bottom: 20px;
+}
 
 
 @media (max-width: 768px) {
@@ -148,5 +213,8 @@
     width: 100%; /* Full width on mobile */
     margin-top:10px;
     margin-left: 0px;
+  }
+  .modal-button:hover, .modal-button:active {
+    transform: scale(1.02);
   }
 }

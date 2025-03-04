@@ -10,6 +10,7 @@ function MyNavbar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
   const [showModal, setShowModal] = useState(false);
+  const [enrollmentType, setEnrollmentType] = useState(null);
   const location = useLocation(); // Get current URL
 
   const handleLinkClick = () => {
@@ -23,15 +24,13 @@ function MyNavbar() {
   const handleEnrollmentClick = (e) => {
     e.preventDefault();
     setShowModal(true);
+    setEnrollmentType(null);
   };
 
-  const handleConfirm = () => {
+
+  const handleConfirm = (link) => {
     setShowModal(false);
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSeuKIuoUfYDSEcAuHHCxOD94jGvWTJRfI_Gzv_GjMuqjGElnA/viewform",
-      "_blank",
-      "noopener,noreferrer"
-    );
+    window.open(link, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -114,7 +113,7 @@ function MyNavbar() {
                   behavior: "smooth",
                 });
               }}>
-                  About
+                  About Us
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/teacherstaffs"  onClick={() => {
                 handleLinkClick();
@@ -190,20 +189,37 @@ function MyNavbar() {
       </Container>
     </Navbar>
     
-      {/* Modal Component */}
-      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        {/* Enrollment Modal */}
+        <Modal show={showModal} onHide={() => setShowModal(false)} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Proceed with Enrollment</Modal.Title>
+          <Modal.Title>Select Enrollment Type</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to proceed to enrollment?</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" style={{ backgroundColor: '#FF0000', color: '#FFFFFF', border: 'none' }} onClick={() => setShowModal(false)}>
-            No
-          </Button>
-          <Button variant="primary" style={{ backgroundColor: '#003153', color: '#FFFFFF', border: 'none' }} onClick={handleConfirm}>
-            Yes
-          </Button>
-        </Modal.Footer>
+        <Modal.Body className="modal-body-custom">
+          {enrollmentType === null ? (
+            <div className="modal-buttons">
+              <Button variant="primary" className="modal-button new-old-button mb-2" onClick={() => setEnrollmentType("newOld")}>New/Old Students</Button>
+              <Button variant="success" className="modal-button transferee-button" onClick={() => setEnrollmentType("transferee")}>Transferee</Button>
+            </div>
+          ) : (
+            <div className="modal-confirmation">
+              <p>Are you sure you want to proceed to enrollment?</p>
+              <div className="modal-buttons modal-buttons-row">
+                <Button variant="danger" className="no-button" onClick={() => setEnrollmentType(null)}>No</Button>
+                <Button
+                  variant="success"
+                  className="yes-button"
+                  onClick={() => handleConfirm(
+                    enrollmentType === "newOld"
+                      ? "https://docs.google.com/forms/d/e/1FAIpQLSeeCep4_ixA6MP91ea1N2cHcN5CsLntZPK8047fKdgQnSo2wQ/viewform"
+                      : "https://docs.google.com/forms/d/e/1FAIpQLSeuKIuoUfYDSEcAuHHCxOD94jGvWTJRfI_Gzv_GjMuqjGElnA/viewform"
+                  )}
+                >
+                  Yes
+                </Button>
+              </div>
+            </div>
+          )}
+        </Modal.Body>
       </Modal>
       </>
   );
