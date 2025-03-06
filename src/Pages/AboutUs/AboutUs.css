@@ -107,13 +107,12 @@
     justify-content: space-between;
     text-align: left;
     gap: 20px;
-    font-family: 'Noto Serif Tibetan', serif;
-
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   
   .mission, .vision {
     width: 48%;
-    font-family: 'Noto Serif Tibetan', serif;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
   }
   
   .academic-imagesA{
@@ -168,6 +167,49 @@
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
   }
 
+  .video-section {
+    padding: 60px 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+ 
+  }
+  
+  .section-title {
+    color: #003153;
+    font-size: 1.5rem;
+    font-weight:bold;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    animation: fadeIn 1.5s ease-in-out;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
+
+  }
+  
+  .video-card {
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   
+  }
+
+  
+  .video-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: transparent;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .react-player {
+    border-radius: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  
   /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .about-us-container {
@@ -227,4 +269,12 @@
       height: 80px;
       max-width: 200px;
     }
+    .video-section h2 {
+      font-size: 1.5rem; /* Smaller heading */
+    }
+  
+    .react-player {
+      height: 250px; /* Smaller video height for tablets */
+    }
   }
+  
