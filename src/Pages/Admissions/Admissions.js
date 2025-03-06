@@ -135,7 +135,7 @@ export default function Events() {
             <p className="footer-contact-title">Contact us</p>
             <p className="footer-contact">
               <a
-                href="https://www.facebook.com/profile.php?id=100081267735529"
+                href="https://www.facebook.com/faithchristianacademy.rizal"
                 target="_blank"
                 rel="noopener noreferrer"
               >

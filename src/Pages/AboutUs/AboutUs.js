@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion"; //for animation
 import "./AboutUs.css";
 import footerLogo from "./assets/footerLogo.png";
+import ReactPlayer from "react-player";
 
 //carousel
 import mainImage from "./assets/mainImage.png";
@@ -14,6 +15,7 @@ import elem1 from "./assets/elem1.png";
 import elem2 from "./assets/elem2.png";
 import elem3 from "./assets/elem3.png";
 import hs from "./assets/highschool.png";
+
 
 export default function AboutUs() {
   const subImages = [mainImage, subImage1, subImage2, subImage3];
@@ -120,6 +122,9 @@ export default function AboutUs() {
           </div>
         </div>
 
+      
+
+
         {/* Zoomed Image Fullscreen View */}
         <AnimatePresence>
           {zoomedImage && (
@@ -159,7 +164,7 @@ export default function AboutUs() {
             <p className="footer-contact-title">Contact us</p>
             <p className="footer-contact">
               <a
-                href="https://www.facebook.com/profile.php?id=100081267735529"
+                href="https://www.facebook.com/faithchristianacademy.rizal"
                 target="_blank"
                 rel="noopener noreferrer"
               >

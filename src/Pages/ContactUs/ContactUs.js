@@ -90,7 +90,7 @@ export default function ContactUs() {
         <div className="footer-right">
           <p className="footer-contact-title">Contact us</p>
           <p className="footer-contact">
-            <a href="https://www.facebook.com/profile.php?id=100081267735529" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/faithchristianacademy.rizal" target="_blank" rel="noopener noreferrer">
               FCARR FB Page
             </a><br />0909-605-7966<br />faith.christian.academy.rizal@gmail.com
           </p>

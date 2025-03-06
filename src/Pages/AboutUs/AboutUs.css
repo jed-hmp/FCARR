@@ -167,7 +167,7 @@
     max-height: 90%;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
   }
-  
+
   /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .about-us-container {
