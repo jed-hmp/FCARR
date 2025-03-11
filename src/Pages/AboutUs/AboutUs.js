@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion"; //for animation
-import { Container, Row, Col, Card, Spinner, Button } from 'react-bootstrap';
 import "./AboutUs.css";
 import footerLogo from "./assets/footerLogo.png";
 import ReactPlayer from "react-player";
@@ -35,11 +34,7 @@ export default function AboutUs() {
     setZoomedImage(img);
   };
 
- const [loading, setLoading] = useState(true);
 
-  const handleVideoReady = () => {
-    setLoading(false);
-  };
   
   
 
@@ -132,46 +127,19 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Video Section */}
-        <Container className="video-section py-5" style={{ backgroundColor: 'transparent' }}>
-        <Row className="justify-content-center text-center">
-          <Col md={8} sm={12}>
-            <h2 className="section-title">🎥 FCARR </h2>
-            <Card className="video-card shadow-lg border-0" style={{ backgroundColor: '#003153' }}>
-              {loading && (
-                <div className="video-loader">
-                  <Spinner animation="border" variant="primary" />
-                  <p>Loading Video...</p>
-                </div>
-              )}
-              <div className="video-wrapper" style={{ backgroundColor: '#003153', maxWidth: '800px', margin: '0 auto' }}>
-                <ReactPlayer
-                  url="https://www.facebook.com/share/v/1AzhznNHan/"
-                  controls
-                  width="100%"
-                  height="400px"
-                  className="react-player"
-                  onReady={handleVideoReady}
-                  config={{
-                    file: {
-                      attributes: {
-                        controlsList: 'nodownload', // Disable download option
-                        onContextMenu: (e) => e.preventDefault(), // Disable Right Click
-                      },
-                    },
-                  }}
-                />
-                <div className="prevent-download"></div>
-            </div>
-          
-            </Card>
-            <Card.Body>
-            <p className="video-description text-dark" style={{ textAlign: 'justify', marginTop: '20px' }}>This video provides an overview of our school's facilities, programs, and community activities. Discover what makes our institution unique and how we strive to create a positive learning environment for all students.
-                     our state-of-the-art classrooms, modern technology labs, and vibrant extracurricular opportunities designed to support both academic excellence and personal growth. Hear from our dedicated educators, passionate students, and supportive community as they share their experiences and what makes our school a special place to learn and thrive.</p>
-            </Card.Body>
-          </Col>
-        </Row>
-      </Container>
+      <div className="video-container">
+      <h2 className="video-title">NEW LOCATION OF FAITH CHRISTIAN ACADEMY OF RODRIGUEZ PHASE 1-C KASIGLAHAN VILLAGE MONTALBAN RIZAL</h2>
+      <div className="player-wrapper">
+        <ReactPlayer 
+          className="react-player"
+          url="https://youtu.be/4frYjYDDFQM" 
+          controls 
+          width="100%" 
+          height="100%"
+        />
+      </div>
+     </div>
+
 
         {/* Zoomed Image Fullscreen View */}
         <AnimatePresence>

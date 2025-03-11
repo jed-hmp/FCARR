@@ -167,46 +167,32 @@
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
   }
 
-  .video-section {
-    padding: 60px 10px;
-    border-radius: 20px;
-    margin-top: 20px;
- 
-  }
-  
-  .section-title {
-    color: #003153;
-    font-size: 1.5rem;
-    font-weight:bold;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    animation: fadeIn 1.5s ease-in-out;
-    font-family: 'Josefin Sans', sans-serif; /* Added the font */
-
-  }
-  
-  .video-card {
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-   
-  }
-
-  
-  .video-loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    background-color: transparent;
-    color: #fff;
-    flex-direction: column;
+  .video-container {
+    max-width: 800px;
+    margin: auto;
     text-align: center;
-    border-radius: 20px;
+    margin-top: 30px;
+  }
+  
+  .video-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif; /* Added the font */
+    color: #003153;
+    font-weight: bold;
+  }
+  
+  .player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background: #000; /* Fallback for loading */
   }
   
   .react-player {
-    border-radius: 20px;
-    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   
