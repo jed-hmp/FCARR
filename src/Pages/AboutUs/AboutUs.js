@@ -131,11 +131,16 @@ export default function AboutUs() {
       <h2 className="video-title">NEW LOCATION OF FAITH CHRISTIAN ACADEMY OF RODRIGUEZ PHASE 1-C KASIGLAHAN VILLAGE MONTALBAN RIZAL</h2>
       <div className="player-wrapper">
         <ReactPlayer 
-          className="react-player"
+           className="react-player"
           url="https://youtu.be/4frYjYDDFQM" 
           controls 
           width="100%" 
           height="100%"
+          config={{
+            youtube: {
+              playerVars: { modestbranding: 1, rel: 0, disablekb: 1 }, // Removes branding & suggested videos
+            },
+          }}
         />
       </div>
      </div>
