@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { db } from "../../firebase"; // Import Firebase Firestore
+import { doc, getDoc } from "firebase/firestore";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Home.css";
 import mainImage from "./assets/mainImage.png";
@@ -7,6 +9,42 @@ import footerLogo from "./assets/footerLogo.png";
 
 export default function Home() {
   const [isZoomed, setIsZoomed] = useState(false);
+
+
+
+
+
+const [current, setCurrent] = useState(0);
+  const [footerInfo, setFooterInfo] = useState({
+    facebook: "",
+    phone: "",
+    email: "",
+  });
+
+  useEffect(() => {
+    const fetchFooterInfo = async () => {
+      try {
+        const footerRef = doc(db, "contacts", "contactInfo");
+        const footerSnap = await getDoc(footerRef);
+
+        if (footerSnap.exists()) {
+          setFooterInfo(footerSnap.data());
+        } else {
+          console.log("No such footer document!");
+        }
+      } catch (error) {
+        console.error("Error fetching footer info:", error);
+      }
+    };
+  
+    fetchFooterInfo();
+  }, []);
+
+
+
+
+
+
 
 
   return (
@@ -84,33 +122,24 @@ export default function Home() {
       </AnimatePresence>
       </div>
 
-      {/* Footer Section */}
-      <footer className="footer">
+        {/* Footer */}
+        <footer className="footer">
         <div className="footer-content">
           <div className="footer-left">
             <div className="footer-logo-container">
               <img src={footerLogo} alt="FCARR Logo" className="footer-logo" />
               <span className="footer-logo-text">FCARR</span>
             </div>
-            <p className="footer-text">
-              © 1995 FCARR.<br />All rights reserved.
-            </p>
+            <p className="footer-text">© 1995 FCARR.<br />All rights reserved</p>
           </div>
-
           <div className="footer-right">
             <p className="footer-contact-title">Contact us</p>
             <p className="footer-contact">
-              <a
-                href="https://www.facebook.com/faithchristianacademy.rizal"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={footerInfo.facebook} target="_blank" rel="noopener noreferrer">
                 FCARR FB Page
-              </a>
-              <br />
-              0909-605-7966
-              <br />
-              faith.christian.academy.rizal@gmail.com
+              </a><br />
+              {footerInfo.phone}<br />
+              {footerInfo.email}
             </p>
           </div>
         </div>

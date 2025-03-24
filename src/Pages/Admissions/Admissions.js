@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Carousel, Accordion, Container } from 'react-bootstrap';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './Admissions.css';
@@ -7,8 +7,9 @@ import student1 from './assets/student1.png';
 import student2 from './assets/student2.png';
 import student3 from './assets/student3.png';
 import student4 from './assets/student4.png';
-
 import footerLogo from "./assets/footerLogo.png";
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase'; // Ensure your Firebase setup is correctly imported
 
 const images = [student1, student2, student3, student4];
 
@@ -48,6 +49,30 @@ const ImageCarousel = ({ images, current, setCurrent }) => {
 
 export default function Events() {
   const [current, setCurrent] = useState(0);
+  const [footerInfo, setFooterInfo] = useState({
+    facebook: "",
+    phone: "",
+    email: "",
+  });
+
+  useEffect(() => {
+    const fetchFooterInfo = async () => {
+      try {
+        const footerRef = doc(db, "contacts", "contactInfo");
+        const footerSnap = await getDoc(footerRef);
+
+        if (footerSnap.exists()) {
+          setFooterInfo(footerSnap.data());
+        } else {
+          console.log("No such footer document!");
+        }
+      } catch (error) {
+        console.error("Error fetching footer info:", error);
+      }
+    };
+  
+    fetchFooterInfo();
+  }, []);
 
   return (
     <div id="admissionsPage">
@@ -81,23 +106,23 @@ export default function Events() {
         {/* Accordion Section */}
         <Container className="accordion-container">
           <Accordion defaultActiveKey="0" alwaysOpen className="responsive-accordion">
-          <Accordion.Item eventKey="0">
-          <Accordion.Header>REQUIREMENTS FOR ENROLLMENT</Accordion.Header>
-          <Accordion.Body>
-            Must bring the following documents to the school office:
-            <ul style={{ color: '#003153' }}>
-              <li>PSA Birth Certificate</li>
-              <li>Original Report Card</li>
-              <li>Form 137/SF10</li>
-              <li>Good Morale Certificate</li>
-            </ul>
-          </Accordion.Body>
-        </Accordion.Item>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>REQUIREMENTS FOR ENROLLMENT</Accordion.Header>
+              <Accordion.Body>
+                Must bring the following documents to the school office:
+                <ul style={{ color: '#003153' }}>
+                  <li>PSA Birth Certificate</li>
+                  <li>Original Report Card</li>
+                  <li>Form 137/SF10</li>
+                  <li>Good Morale Certificate</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
 
             <Accordion.Item eventKey="1">
               <Accordion.Header>APPLICATION PROCEDURE</Accordion.Header>
               <Accordion.Body>
-              <ul style={{ color: '#003153' }}>
+                <ul style={{ color: '#003153' }}>
                   <li>New enrollees must complete all requirements before proceeding with enrollment.</li>
                   <li>Transferee application should be submitted directly to the school office.</li>
                 </ul>
@@ -107,7 +132,7 @@ export default function Events() {
             <Accordion.Item eventKey="2">
               <Accordion.Header>WE OFFER</Accordion.Header>
               <Accordion.Body>
-                  <ul style={{ color: '#003153' }}>
+                <ul style={{ color: '#003153' }}>
                   <li>PRESCHOOL</li>
                   <li>Grade School Grade 1-6</li>
                   <li>HIGHSCHOOL Grade 7-10</li>
@@ -118,33 +143,25 @@ export default function Events() {
           </Accordion>
         </Container>
       </div>
-       {/* Footer Section */}
-       <footer className="footer">
+
+      {/* Footer */}
+      <footer className="footer">
         <div className="footer-content">
           <div className="footer-left">
             <div className="footer-logo-container">
               <img src={footerLogo} alt="FCARR Logo" className="footer-logo" />
               <span className="footer-logo-text">FCARR</span>
             </div>
-            <p className="footer-text">
-              © 1995 FCARR.<br />All rights reserved.
-            </p>
+            <p className="footer-text">© 1995 FCARR.<br />All rights reserved</p>
           </div>
-
           <div className="footer-right">
             <p className="footer-contact-title">Contact us</p>
             <p className="footer-contact">
-              <a
-                href="https://www.facebook.com/faithchristianacademy.rizal"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={footerInfo.facebook} target="_blank" rel="noopener noreferrer">
                 FCARR FB Page
-              </a>
-              <br />
-              0909-605-7966
-              <br />
-              faith.christian.academy.rizal@gmail.com
+              </a><br />
+              {footerInfo.phone}<br />
+              {footerInfo.email}
             </p>
           </div>
         </div>

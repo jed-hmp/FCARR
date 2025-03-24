@@ -4,7 +4,7 @@
   }
   .navbar-custom {
     background-color: #FFFFFF; /* Dark blue background */
-    padding: 10px 0;
+    padding: 3px 0;
   }
   
   .navbar-custom .navbar-brand {
@@ -12,10 +12,11 @@
     align-items: center;
     color: #003153 !important; /* Black text */
     font-weight: bold;
+  
   }
   
   .navbar-logo {
-    width: 40px; /* Adjust size as needed */
+    width: 60px; /* Adjust size as needed */
     height: auto;
     margin-right: 10px;
 
@@ -23,7 +24,7 @@
   .navbar-brand-custom {
     font-size: 1.5rem; /* Adjust the size as needed */
     font-weight: bold;
-    margin-right:100px; /* Adds space between the logo and Home link */
+    margin-right:-110px; /* Adds space between the logo and Home link */
   }
   .navbar-custom .navbar-nav {
     display: flex;
@@ -94,7 +95,7 @@
   /* General nav link styling */
 .custom-nav .nav-item {
   font-family: 'Josefin Sans', sans-serif; /* Added the font */
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: #003153; /* Change text color */
   text-transform: uppercase; /* Optional: Makes text uppercase */
