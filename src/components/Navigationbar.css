@@ -5,6 +5,7 @@
   .navbar-custom {
     background-color: #FFFFFF; /* Dark blue background */
     padding: 3px 0;
+    width: 100%;
   }
   
   .navbar-custom .navbar-brand {
@@ -24,7 +25,7 @@
   .navbar-brand-custom {
     font-size: 1.5rem; /* Adjust the size as needed */
     font-weight: bold;
-    margin-right:-110px; /* Adds space between the logo and Home link */
+    margin-left: -110px;
   }
   .navbar-custom .navbar-nav {
     display: flex;
@@ -214,8 +215,12 @@
     width: 100%; /* Full width on mobile */
     margin-top:10px;
     margin-left: 0px;
+    text-align: center;
   }
   .modal-button:hover, .modal-button:active {
     transform: scale(1.02);
+  }
+  .navbar-brand-custom{
+    margin-left: 0;
   }
 }
