@@ -67,24 +67,24 @@ export default function ContactUs() {
 
   const getSearchQueryLink = (placeLink) => {
     const defaultMap =
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.0192530420984!2d121.1292619!3d14.7474128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb0056a4e691%3A0x9a51b4d846b8f36d!2sFAITH%20CHRISTIAN%20ACADEMY%20RODRIGUEZ%20RIZAL!5e0!3m2!1sen!2sph!4v1711654325678!5m2!1sen!2sph&z=16";
-
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.0192530420984!2d121.1292619!3d14.7474128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb0056a4e691%3A0x9a51b4d846b8f36d!2sFAITH%20CHRISTIAN%20ACADEMY%20RODRIGUEZ%20RIZAL!5e0!3m2!1sen!2sph!4v1711654325678!5m2!1sen!2sph&z=17"; // Set zoom to 17
+  
     if (!placeLink) return defaultMap;
-
-    // Ensure it's an embeddable URL
+  
+    // Ensure it's an embeddable URL and append the zoom level if not present
     if (!placeLink.includes("embed")) {
       console.warn("Invalid map link, using default:", placeLink);
       return defaultMap;
     }
-
-     // Append zoom level if missing
-  if (!placeLink.includes("&z=")) {
-    return `${placeLink}&z=16`; // Zoom level set to 1 (world view)
-  }
-
-
+  
+    // Append zoom level if missing
+    if (!placeLink.includes("&z=")) {
+      return `${placeLink}&z=17`; // Zoom level set to 17
+    }
+  
     return placeLink;
   };
+  
 
 
   const handleSubmit = () => {
