@@ -77,6 +77,12 @@ export default function ContactUs() {
       return defaultMap;
     }
 
+     // Append zoom level if missing
+  if (!placeLink.includes("&z=")) {
+    return `${placeLink}&z=17`; // Zoom level set to 1 (world view)
+  }
+
+
     return placeLink;
   };
 
