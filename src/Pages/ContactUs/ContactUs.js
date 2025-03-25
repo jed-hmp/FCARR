@@ -66,7 +66,7 @@ export default function ContactUs() {
   }, []);
 
   const getSearchQueryLink = (placeLink) => {
-    if (!placeLink) return "https://www.google.com/maps?q=FAITH+CHRISTIAN+ACADEMY+RODRIGUEZ+RIZAL&z=16&output=embed";
+    if (!placeLink) return "https://www.google.com/maps/place/FAITH+CHRISTIAN+ACADEMY+RODRIGUEZ+RIZAL/@14.7474128,121.1292619,16z/data=!4m10!1m2!2m1!1sFAITH+CHRISTIAN+ACADEMY+RODRIGUEZ+RIZAL!3m6!1s0x3397bb0056a4e691:0x9a51b4d846b8f36d!8m2!3d14.747413!4d121.1387886!15sCidGQUlUSCBDSFJJU1RJQU4gQUNBREVNWSBST0RSSUdVRVogUklaQUySAQZzY2hvb2zgAQA!16s%2Fg%2F11y79ycv92?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D";
 
     const match = placeLink.match(/place\/([^/]+)/);
     if (match) {
