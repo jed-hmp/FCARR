@@ -66,16 +66,10 @@ export default function ContactUs() {
   }, []);
 
   const getSearchQueryLink = (placeLink) => {
-    if (!placeLink) return "https://www.google.com/maps/place/FAITH+CHRISTIAN+ACADEMY+RODRIGUEZ+RIZAL/@14.7474128,121.1292619,16z/data=!4m10!1m2!2m1!1sFAITH+CHRISTIAN+ACADEMY+RODRIGUEZ+RIZAL!3m6!1s0x3397bb0056a4e691:0x9a51b4d846b8f36d!8m2!3d14.747413!4d121.1387886!15sCidGQUlUSCBDSFJJU1RJQU4gQUNBREVNWSBST0RSSUdVRVogUklaQUySAQZzY2hvb2zgAQA!16s%2Fg%2F11y79ycv92?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D";
-
-    const match = placeLink.match(/place\/([^/]+)/);
-    if (match) {
-      const placeName = decodeURIComponent(match[1]).replace(/\+/g, " ");
-      return `https://www.google.com/maps?q=${encodeURIComponent(placeName)}&z=16&output=embed`;
-    }
-
+    if (!placeLink) return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.0192530420984!2d121.1292619!3d14.7474128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb0056a4e691%3A0x9a51b4d846b8f36d!2sFAITH%20CHRISTIAN%20ACADEMY%20RODRIGUEZ%20RIZAL!5e0!3m2!1sen!2sph!4v1711654325678!5m2!1sen!2sph";
     return placeLink;
   };
+
 
   const handleSubmit = () => {
     if (!userEmail || !question) {
